@@ -1,0 +1,493 @@
+CryptoDevsDAO ABI:
+
+```
+[
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftMarketplace",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_cryptoDevsNFT",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_nftTokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "createProposal",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "proposalIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "executeProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "numProposals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "proposals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "nftTokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "yayVotes",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nayVotes",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "executed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "proposalIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum CryptoDevsDAO.Vote",
+          "name": "vote",
+          "type": "uint8"
+        }
+      ],
+      "name": "voteOnProposal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawEter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+
+```
+
+CryptoDevsNFT ABI:
+
+```
+[
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOnwerByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+
+```
+
+FakeNFTMarketplace ABI:
+
+```
+[
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "available",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "purchase",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+
+```
+
+CryptoDevsDAO Contract:
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+interface IFakeNFTMarketplace {
+    function getPrice() external view returns (uint256);
+
+    function available(uint256 _tokenId) external view returns (bool);
+
+    function purchase(uint256 _tokenId) external payable;
+}
+
+interface ICryptoDevsNFT {
+    function balanceOf(address owner) external view returns (uint256);
+
+    function tokenOfOnwerByIndex(
+        address owner,
+        uint256 index
+    ) external view returns (uint256);
+}
+
+contract CryptoDevsDAO is Ownable {
+    struct Proposal {
+        uint256 nftTokenId;
+        uint256 deadline;
+        uint256 yayVotes;
+        uint256 nayVotes;
+        bool executed;
+        mapping(uint256 => bool) voters;
+    }
+
+    mapping(uint256 => Proposal) public proposals;
+
+    uint256 public numProposals;
+
+    IFakeNFTMarketplace nftMarketplace;
+    ICryptoDevsNFT cryptoDevsNFT;
+
+    constructor(address _nftMarketplace, address _cryptoDevsNFT) payable {
+        nftMarketplace = IFakeNFTMarketplace(_nftMarketplace);
+        cryptoDevsNFT = ICryptoDevsNFT(_cryptoDevsNFT);
+    }
+
+    modifier nftHolderOnly() {
+        require(cryptoDevsNFT.balanceOf(msg.sender) > 0, "NOT_A_DAO_MEMBER");
+        _;
+    }
+
+    function createProposal(
+        uint256 _nftTokenId
+    ) external nftHolderOnly returns (uint256) {
+        require(nftMarketplace.available(_nftTokenId), "NFT_NOT_FOR_SALE");
+        Proposal storage proposal = proposals[numProposals];
+        proposal.nftTokenId = _nftTokenId;
+
+        proposal.deadline = block.timestamp + 5 minutes;
+
+        numProposals++;
+
+        return numProposals - 1;
+    }
+
+    modifier activeProposalOnly(uint256 proposalIndex) {
+        require(
+            proposals[proposalIndex].deadline > block.timestamp,
+            "DEADLINE_EXCEEDED"
+        );
+        _;
+    }
+
+    enum Vote {
+        YAY,
+        NAY
+    }
+
+    function voteOnProposal(
+        uint256 proposalIndex,
+        Vote vote
+    ) external nftHolderOnly activeProposalOnly(proposalIndex) {
+        Proposal storage proposal = proposals[proposalIndex];
+
+        uint256 voterNFTBalance = cryptoDevsNFT.balanceOf(msg.sender);
+        uint256 numVotes = 0;
+
+        for (uint256 i = 0; i < voterNFTBalance; i++) {
+            uint256 tokenId = cryptoDevsNFT.tokenOfOnwerByIndex(msg.sender, i);
+            if (proposal.voters[tokenId] == false) {
+                numVotes++;
+                proposal.voters[tokenId] = true;
+            }
+        }
+
+        require(numVotes > 0, "ALREADY_VOTED");
+
+        if (vote == Vote.YAY) {
+            proposal.yayVotes += numVotes;
+        } else {
+            proposal.nayVotes += numVotes;
+        }
+    }
+
+    modifier inactiveProposalOnly(uint256 proposalIndex) {
+        require(
+            proposals[proposalIndex].deadline <= block.timestamp,
+            "DEADLINE_NOT_EXCEEDED"
+        );
+
+        require(
+            proposals[proposalIndex].executed == false,
+            "PROPOSAL_ALREADY_EXECUTED"
+        );
+        _;
+    }
+
+    function executeProposal(
+        uint256 proposalIndex
+    ) external nftHolderOnly inactiveProposalOnly(proposalIndex) {
+        Proposal storage proposal = proposals[proposalIndex];
+
+        if (proposal.yayVotes > proposal.nayVotes) {
+            uint256 nftPrice = nftMarketplace.getPrice();
+            require(address(this).balance >= nftPrice, "NOT_ENOUGH_FUNDS");
+            nftMarketplace.purchase{value: nftPrice}(proposal.nftTokenId);
+        }
+
+        proposal.executed = true;
+    }
+
+    function withdrawEter() external onlyOwner {
+        uint256 amount = address(this).balance;
+        require(amount > 0, "Nothing to withdraw, contract balance empty");
+        (bool sent, ) = payable(owner()).call{value: amount}("");
+        require(sent, "FAILED_TO_WITHDRAW_ETHER");
+    }
+
+    receive() external payable {}
+
+    fallback() external payable {}
+}
+
+
+```
+
+CryptoDevsNFT Contract:
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+
+contract CryptoDevsNFT is ERC721Enumerable {
+    constructor() ERC721("CryptoDevsNFT", "CD") {}
+
+    function mint() public {
+        _safeMint(msg.sender, totalSupply());
+    }
+}
+
+
+```
+
+FakeNFTMarketplace contract:
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract FakeNFTMarketplace {
+    mapping(uint256 => address) public tokens;
+
+    uint256 nftPrice = 0.1 ether;
+
+    function purchase(uint256 _tokenId) external payable {
+        require(msg.value == nftPrice, "This NFT costs 0.1 ether");
+        tokens[_tokenId] = msg.sender;
+    }
+
+    function getPrice() external view returns (uint256) {
+        return nftPrice;
+    }
+
+    function available(uint256 _tokenId) external view returns (bool) {
+        if (tokens[_tokenId] == address(0)) {
+            return true;
+        }
+        return false;
+    }
+}
+
+
+```
